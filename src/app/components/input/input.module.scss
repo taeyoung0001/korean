@@ -1,0 +1,29 @@
+.input-container {
+  width: 100%;
+  .input {
+    width: 100%;
+
+    border-radius: 4px;
+    border: 1px solid rgb(123, 123, 123);
+
+    &:focus {
+      border-color: rgb(53, 53, 255);
+    }
+  }
+
+  .large {
+    padding: 16px 20px;
+    font-size: 20px;
+    height: 60px;
+  }
+  .medium {
+    padding: 14px 20px;
+    font-size: 16px;
+    height: 49px;
+  }
+  .small {
+    padding: 8px 20px;
+    font-size: 12px;
+    height: 40px;
+  }
+}
