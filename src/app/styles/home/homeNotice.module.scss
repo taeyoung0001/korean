@@ -2,15 +2,33 @@
   max-width: 500px;
   width: 100%;
   padding: 0 20px;
-  margin-top: 20px;
+  margin: 20px auto;
 
   .title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
     padding: 20px 0px;
     .buttons {
       max-width: 100px;
       width: 100%;
     }
+  }
+  .list-wrap {
+    li {
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      list-style: none;
+    }
+  }
+}
+
+@media (min-width: 789px) {
+  .notice-container {
+    max-width: 700px;
   }
 }

@@ -16,6 +16,9 @@ const NavBar = () => {
         <li>
           <span>일러두기</span>
         </li>
+        <li>
+          <span>최근 검색한 단어</span>
+        </li>
       </ul>
     </nav>
   );
