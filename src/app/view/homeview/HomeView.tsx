@@ -2,9 +2,9 @@
 
 import styles from "@/app/styles/home/HomeView.module.scss";
 import cn from "classnames/bind";
-import Button from "@/app/components/buttons/button";
 import NavBar from "@/app/components/navBar";
 import HomeSearch from "@/app/components/homeSearch";
+import HomeNotice from "@/app/components/homeNotice";
 
 const cx = cn.bind(styles);
 
@@ -23,21 +23,8 @@ const HomeView = () => {
       </div>
       {/* 검색창 */}
       <HomeSearch />
-
       {/* 공지사항 */}
-      <div>
-        <div>
-          <span>알립니다</span>
-          <Button title={"더보기"} className="small" />
-        </div>
-
-        <ul>
-          <li>
-            <span>공지사항들~~</span>
-            <span>날짜들</span>
-          </li>
-        </ul>
-      </div>
+      <HomeNotice />
     </div>
   );
 };

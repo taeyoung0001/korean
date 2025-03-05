@@ -11,9 +11,9 @@
     color: rgb(255, 255, 255);
     height: 49px;
     &:hover {
-      letter-spacing: 3px;
       font-weight: 600;
       cursor: pointer;
+      color: #191919;
     }
   }
   .large {
@@ -21,10 +21,9 @@
     font-size: 20px;
   }
   .small {
-    .large {
-      padding: 2px 20px;
-      font-size: 12px;
-    }
+    height: 30px;
+    padding: 2px 20px;
+    font-size: 12px;
   }
 }
 
