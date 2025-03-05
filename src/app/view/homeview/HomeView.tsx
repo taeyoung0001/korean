@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import Input from "@/app/components/input/input";
-import styles from "./HomeView.module.scss";
+import styles from "@/app/styles/HomeView.module.scss";
 import cn from "classnames/bind";
 import Button from "@/app/components/buttons/button";
+import NavBar from "@/app/components/navBar";
 
 const cx = cn.bind(styles);
 
@@ -14,20 +15,8 @@ const HomeView = () => {
         <p>본 페이지는 국립국어원 표전국어대사전 openAPI로 제작되었습니다.</p>
       </div>
 
-      {/* 로그인페이지 보류 */}
-      <nav>
-        <ul className="navlist">
-          <li>
-            <span>들어가기</span>
-          </li>
-          <li>
-            <span>회원가입</span>
-          </li>
-          <li>
-            <span>일러두기</span>
-          </li>
-        </ul>
-      </nav>
+      {/* 로그인페이지 */}
+      <NavBar />
 
       <div className={cx("logo")}>
         <img src="korea.png" alt="국립국어원 표준국어대사전 로고 이미지" />

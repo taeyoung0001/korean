@@ -1,0 +1,35 @@
+.nav-wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  .navlist {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    list-style: none;
+    li {
+      list-style: none;
+      position: relative;
+
+      span {
+        font-size: 14px;
+        cursor: pointer;
+      }
+      & :hover {
+        color: #7a6860;
+      }
+
+      &:not(:last-child)::after {
+        content: "I";
+        position: absolute;
+        right: -11px;
+        top: 0.5px;
+        color: rgb(171, 171, 171);
+      }
+    }
+  }
+}

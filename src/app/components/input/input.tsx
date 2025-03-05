@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./input.module.scss";
+import styles from "@/app/styles/components/input.module.scss";
 import cn from "classnames/bind";
 
 const cx = cn.bind(styles);
