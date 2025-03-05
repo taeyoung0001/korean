@@ -6,9 +6,10 @@
     border: 0.5px solid #d4d4d4;
     outline: none;
     padding: 4px 12px;
-    font-size: 15px;
+    font-size: 10px;
     transition: all 0.4s ease-in-out;
     color: rgb(255, 255, 255);
+    height: 49px;
     &:hover {
       letter-spacing: 3px;
       font-weight: 600;
@@ -25,4 +26,9 @@
       font-size: 12px;
     }
   }
+}
+
+//max는 이하일때
+//min은 이상일때
+@media (min-width: 280px) {
 }

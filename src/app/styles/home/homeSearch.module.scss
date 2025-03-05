@@ -1,0 +1,44 @@
+.search-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0px 20px;
+
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    .inputs {
+      width: 100%;
+      max-width: 600px;
+    }
+    .buttons-wrap {
+      display: flex;
+      justify-content: center;
+      .buttons {
+        width: 100%;
+        max-width: 150px;
+      }
+      .buttons-detail {
+        max-width: 170px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 360px) {
+  .search-container {
+    .form-wrapper {
+      flex-direction: row;
+      .buttons-wrap {
+        .buttons {
+          min-width: 50px;
+        }
+        .buttons-detail {
+          min-width: 80px;
+        }
+      }
+    }
+  }
+}

@@ -2,11 +2,13 @@
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0px 20px;
   .navlist {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
+    justify-content: center;
+    // justify-content: flex-end;
+    // align-items: center;
+    gap: 10px;
     max-width: 1280px;
     margin: 0 auto;
 
@@ -16,7 +18,7 @@
       position: relative;
 
       span {
-        font-size: 14px;
+        font-size: 10px;
         cursor: pointer;
       }
       & :hover {
@@ -26,10 +28,19 @@
       &:not(:last-child)::after {
         content: "I";
         position: absolute;
-        right: -11px;
-        top: 0.5px;
+        font-size: 10px;
+        right: -6px;
+        top: 6px;
         color: rgb(171, 171, 171);
       }
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .nav-wrap {
+    .navlist {
+      justify-content: flex-end;
     }
   }
 }

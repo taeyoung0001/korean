@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import Input from "@/app/components/input/input";
-import styles from "@/app/styles/HomeView.module.scss";
+
+import styles from "@/app/styles/home/HomeView.module.scss";
 import cn from "classnames/bind";
 import Button from "@/app/components/buttons/button";
 import NavBar from "@/app/components/navBar";
+import HomeSearch from "@/app/components/homeSearch";
 
 const cx = cn.bind(styles);
 
@@ -14,21 +15,14 @@ const HomeView = () => {
       <div className={cx("alert-title")}>
         <p>본 페이지는 국립국어원 표전국어대사전 openAPI로 제작되었습니다.</p>
       </div>
-
-      {/* 로그인페이지 */}
+      {/* 네브바 */}
       <NavBar />
-
+      {/* 로고이미지 */}
       <div className={cx("logo")}>
         <img src="korea.png" alt="국립국어원 표준국어대사전 로고 이미지" />
       </div>
       {/* 검색창 */}
-      <div>
-        <form>
-          <Input className={"small"} />
-          <Button title={"찾기"} />
-        </form>
-        <Button title={"자세히찾기"} />
-      </div>
+      <HomeSearch />
 
       {/* 공지사항 */}
       <div>
