@@ -1,0 +1,33 @@
+.button-container {
+  width: 100%;
+  .button {
+    width: 100%;
+    border-radius: 4px;
+    border: 0.5px solid #d4d4d4;
+    outline: none;
+    padding: 4px 12px;
+    font-size: 10px;
+    transition: all 0.4s ease-in-out;
+    color: rgb(255, 255, 255);
+    height: 49px;
+    &:hover {
+      font-weight: 600;
+      cursor: pointer;
+      color: #191919;
+    }
+  }
+  .large {
+    padding: 12px 20px;
+    font-size: 20px;
+  }
+  .small {
+    height: 30px;
+    padding: 2px 20px;
+    font-size: 12px;
+  }
+}
+
+//max는 이하일때
+//min은 이상일때
+@media (min-width: 280px) {
+}

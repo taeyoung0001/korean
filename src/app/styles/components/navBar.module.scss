@@ -1,0 +1,46 @@
+.nav-wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0px 20px;
+  .navlist {
+    display: flex;
+    justify-content: center;
+    // justify-content: flex-end;
+    // align-items: center;
+    gap: 10px;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    list-style: none;
+    li {
+      list-style: none;
+      position: relative;
+
+      span {
+        font-size: 10px;
+        cursor: pointer;
+      }
+      & :hover {
+        color: #7a6860;
+      }
+
+      &:not(:last-child)::after {
+        content: "I";
+        position: absolute;
+        font-size: 10px;
+        right: -6px;
+        top: 6px;
+        color: rgb(171, 171, 171);
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .nav-wrap {
+    .navlist {
+      justify-content: flex-end;
+    }
+  }
+}
