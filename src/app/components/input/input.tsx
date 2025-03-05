@@ -3,6 +3,7 @@ import styles from "./input.module.scss";
 import cn from "classnames/bind";
 
 const cx = cn.bind(styles);
+//제네릭타입으로 리팩토링 필요
 
 type InputProps = {
   onChange?: () => void;
