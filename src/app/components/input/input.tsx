@@ -6,12 +6,14 @@ const cx = cn.bind(styles);
 //제네릭타입으로 리팩토링 필요
 
 type InputProps = {
-  onChange?: () => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeHolder?: string;
+  value?: string;
   className: "large" | "medium" | "small";
 };
+
 const Input = (props: InputProps) => {
-  const { onChange, placeHolder, className = "medium" } = props;
+  const { value, onChange, placeHolder, className = "medium" } = props;
   return (
     <div className={cx("input-container")}>
       <input
@@ -19,6 +21,7 @@ const Input = (props: InputProps) => {
         onChange={onChange}
         placeholder={placeHolder}
         type="text"
+        value={value}
       />
     </div>
   );
