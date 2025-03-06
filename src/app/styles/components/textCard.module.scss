@@ -1,0 +1,71 @@
+.text-card-container {
+  width: 100%;
+  max-width: 1280px;
+  border: 1px solid black;
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    p {
+      width: 100%;
+      overflow-wrap: break-word; //텍스트 자동으로 줄 바꿈 처리 방법임!
+      border-bottom: 1px solid black;
+    }
+    .word {
+      padding: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 4px;
+      span {
+        font-size: 10px;
+      }
+    }
+    .content {
+      padding: 10px;
+    }
+  }
+}
+
+@media (min-width: 789px) {
+  .text-card-container {
+    border: none;
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 10px;
+      word-wrap: break-word;
+
+      p {
+        border-bottom: none;
+      }
+      .word {
+        border: 2px solid rgb(105, 105, 105);
+        border-radius: 4px;
+        justify-content: center;
+
+        width: 100%;
+        max-width: 150px;
+        min-width: 150px;
+        padding: 20px;
+      }
+      .content {
+        display: flex;
+        align-items: center;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        min-width: 0; /* 줄 바꿈 허용 */
+      }
+    }
+  }
+}
+
+// 📌이유:  min-width: 0; ;
+// flex 아이템은 기본적으로 자신의 최소 크기를 유지하려 합니다.
+// min-width: 0;을 설정하면 .content가 강제로 줄어들면서 break-word가 동작할 수 있게 됩니다.
+
+// overflow-wrap: break-word;
+// word-break: break-word;
+// overflow-wrap: break-word;는 공백 기준으로 줄 바꿈되지만,
+// word-break: break-word;를 추가하면 단어가 길어도 강제 줄 바꿈 가능.
