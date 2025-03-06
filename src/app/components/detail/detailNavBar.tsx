@@ -1,6 +1,6 @@
-import HomeSearch from "./homeSearch";
 import styles from "@/app/styles/detail/detailNavBar.module.scss";
 import cn from "classnames/bind";
+import HomeSearch from "../homeSearch";
 
 const cx = cn.bind(styles);
 
@@ -11,7 +11,6 @@ const DetailNavBar = () => {
       <div className={cx("img-wrap")}>
         <img src="/detailLogo.png" alt="" />
       </div>
-
       <HomeSearch />
     </div>
   );
