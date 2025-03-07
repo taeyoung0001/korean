@@ -6,16 +6,17 @@ const cx = cn.bind(styles);
 type TextCardProps = {
   word?: string;
   content?: string;
+  number?: string;
 };
 const TextCard = (props: TextCardProps) => {
-  const { word, content } = props;
+  const { word, content, number } = props;
 
   return (
     <div className={cx("text-card-container")}>
       <div className={cx("container")}>
         <p className={cx("word")}>
           {word}
-          <span>1</span>
+          <span>{number}</span>
         </p>
         <p className={cx("content")}>{content}</p>
       </div>

@@ -1,4 +1,4 @@
-import DetailView from "../view/Detail/DetailView";
+import DetailView from "@/app/view/Detail/DetailView";
 
 const DetailPage = () => {
   return (
