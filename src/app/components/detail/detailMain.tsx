@@ -3,21 +3,10 @@ import cn from "classnames/bind";
 import TextCard from "../cards/textCard";
 
 const cx = cn.bind(styles);
-type Sense = {
-  definition: string;
-  link: string;
-  type: string;
-};
-type WordData = {
-  sup_no: string;
-  word: string;
-  target_code: string;
-  sense: Sense;
-  pos: string;
-};
 
 type DetailMainProps = {
-  itemArray: WordData[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  itemArray: any;
 };
 
 const DetailMain = (props: DetailMainProps) => {
@@ -31,15 +20,21 @@ const DetailMain = (props: DetailMainProps) => {
       </div>
 
       <div className={cx("content")}>
-        {itemArray.map((list) => (
-          <div key={list.sup_no}>
-            <TextCard
-              number={list.sup_no}
-              word={list.word}
-              content={list.sense.definition}
-            />
-          </div>
-        ))}
+        {itemArray.map(
+          (list: {
+            sup_no: string;
+            word: string;
+            sense: { definition: string | undefined };
+          }) => (
+            <div key={list.sup_no}>
+              <TextCard
+                number={list.sup_no}
+                word={list.word}
+                content={list.sense.definition}
+              />
+            </div>
+          )
+        )}
       </div>
     </div>
   );

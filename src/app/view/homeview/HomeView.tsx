@@ -5,6 +5,7 @@ import cn from "classnames/bind";
 import NavBar from "@/app/components/navBar";
 import HomeSearch from "@/app/components/homeSearch";
 import HomeNotice from "@/app/components/homeNotice";
+import Link from "next/link";
 
 const cx = cn.bind(styles);
 
@@ -19,7 +20,10 @@ const HomeView = () => {
       <NavBar />
       {/* 로고이미지 */}
       <div className={cx("logo")}>
-        <img src="korea.png" alt="국립국어원 표준국어대사전 로고 이미지" />
+        <Link href={"/"}>
+          {" "}
+          <img src="korea.png" alt="국립국어원 표준국어대사전 로고 이미지" />
+        </Link>
       </div>
       {/* 검색창 */}
       <HomeSearch />

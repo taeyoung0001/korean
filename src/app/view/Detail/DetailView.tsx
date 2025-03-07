@@ -27,7 +27,6 @@ const DetailView = () => {
     <div>
       {data ? (
         <>
-          {" "}
           <DetailNavBar />
           <DetailMain itemArray={data} />
         </>

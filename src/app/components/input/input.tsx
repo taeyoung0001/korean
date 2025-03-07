@@ -9,14 +9,22 @@ type InputProps = {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeHolder?: string;
   value?: string;
-  className: "large" | "medium" | "small";
+  className?: "large" | "medium" | "small";
+  onkeydown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 };
 
 const Input = (props: InputProps) => {
-  const { value, onChange, placeHolder, className = "medium" } = props;
+  const {
+    value,
+    onChange,
+    placeHolder,
+    className = "medium",
+    onkeydown,
+  } = props;
   return (
     <div className={cx("input-container")}>
       <input
+        onKeyDown={onkeydown}
         className={cx("input", className)}
         onChange={onChange}
         placeholder={placeHolder}
