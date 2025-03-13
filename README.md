@@ -16,3 +16,9 @@
 -home
 
 -detail
+
+## 사용언어
+
+front : Next.js, sass, typeScript
+
+back : MongoDB
