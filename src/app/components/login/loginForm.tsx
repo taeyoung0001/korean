@@ -16,7 +16,7 @@ const LoginForm = () => {
       <button
         className={cx("btn-social", "git")}
         onClick={() => {
-          signIn("github");
+          signIn("github", { callbackUrl: "/" });
         }}
       >
         깃허브로 로그인하기
@@ -24,7 +24,7 @@ const LoginForm = () => {
       <button
         className={cx("btn-social", "kakao")}
         onClick={() => {
-          signIn("kakao");
+          signIn("kakao", { callbackUrl: "/" });
         }}
       >
         카카오로 로그인하기

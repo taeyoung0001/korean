@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NavBar from "./components/navBar";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
@@ -24,11 +25,18 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const session = await getServerSession(authOptions); //서버 컴포넌트, 서버 기능에서 사용하는 함수
-  console.log(session);
+  const session = await getServerSession(authOptions);
+  if (session) {
+    console.log(session);
+  }
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        {/* 맨위에 정보창 */}
+        <div className="alert-title">
+          <p>본 페이지는 국립국어원 표전국어대사전 openAPI로 제작되었습니다.</p>
+        </div>
+        <NavBar session={session} />
         {children}
       </body>
     </html>
