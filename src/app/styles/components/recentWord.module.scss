@@ -1,0 +1,12 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+@media (min-width: 479px) {
+  .modal {
+    flex-direction: row;
+  }
+}

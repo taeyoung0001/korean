@@ -15,9 +15,9 @@ const RecentWord = () => {
       {itemList == null
         ? "검색어 없음"
         : itemList.map((a: string, i: number) => (
-            <>
-              <p key={i}>{a}</p>
-            </>
+            <div key={i}>
+              <p>{a}</p>
+            </div>
           ))}
     </div>
   );

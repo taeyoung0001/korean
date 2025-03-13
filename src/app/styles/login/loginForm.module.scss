@@ -1,0 +1,36 @@
+.login-container {
+  padding: 0px 10px;
+  h2 {
+    text-align: center;
+    padding: 40px 0px;
+  }
+  .btn-social {
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    outline: none;
+    font-size: 10px;
+    background-color: transparent;
+    margin: 10px 0px;
+    border: none;
+    cursor: pointer;
+  }
+  .git {
+    background-color: #0d1117;
+    color: white;
+    font-weight: 600px;
+  }
+  .kakao {
+    background-color: rgb(255, 255, 9);
+  }
+  a {
+    color: black;
+    text-decoration: none;
+    span {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+      cursor: pointer;
+    }
+  }
+}

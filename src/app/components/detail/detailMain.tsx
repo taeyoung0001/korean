@@ -31,7 +31,6 @@ const DetailMain = (props: DetailMainProps) => {
       if (!Array.isArray(storedWords)) {
         storedWords = [];
       }
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       storedWords = [];
     }
